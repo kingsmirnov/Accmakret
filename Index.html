@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RblxAccMarket Academy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Inter,sans-serif;
+}
+
+body{
+background:#060817;
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:700px;
+height:700px;
+background:radial-gradient(#6f5cff55,transparent 70%);
+top:-200px;
+left:-150px;
+z-index:-2;
+animation:float 12s ease-in-out infinite;
+}
+
+body::after{
+content:"";
+position:fixed;
+width:600px;
+height:600px;
+background:radial-gradient(#00e5ff33,transparent 70%);
+bottom:-150px;
+right:-100px;
+z-index:-2;
+animation:float2 10s ease-in-out infinite;
+}
+
+@keyframes float{
+50%{transform:translateY(40px);}
+}
+
+@keyframes float2{
+50%{transform:translateY(-40px);}
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 10%;
+backdrop-filter:blur(15px);
+position:sticky;
+top:0;
+background:rgba(6,8,23,.7);
+z-index:99;
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+background:linear-gradient(90deg,#00e5ff,#7b61ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+nav a{
+color:white;
+margin-left:30px;
+text-decoration:none;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00e5ff;
+}
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:120px 20px;
+min-height:90vh;
+}
+
+.hero-content{
+max-width:850px;
+animation:fadeUp 1s ease;
+}
+
+.hero h1{
+font-size:65px;
+line-height:1.1;
+margin-bottom:25px;
+}
+
+.gradient{
+background:linear-gradient(90deg,#00e5ff,#7b61ff,#ff49db);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+font-size:20px;
+color:#c8d0e7;
+line-height:1.7;
+margin-bottom:40px;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:18px 34px;
+border-radius:14px;
+font-weight:700;
+text-decoration:none;
+transition:.35s;
+}
+
+.primary{
+background:linear-gradient(90deg,#00e5ff,#7b61ff);
+color:white;
+}
+
+.primary:hover{
+transform:translateY(-5px);
+box-shadow:0 20px 40px #7b61ff66;
+}
+
+.secondary{
+border:1px solid #3f4568;
+color:white;
+}
+
+.secondary:hover{
+background:#1c2141;
+}
+
+section{
+padding:100px 10%;
+}
+
+.title{
+text-align:center;
+font-size:42px;
+margin-bottom:60px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,.05);
+padding:35px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(10px);
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 45px rgba(0,229,255,.15);
+}
+
+.card h3{
+margin-bottom:15px;
+}
+
+.card p{
+color:#cfd7ea;
+line-height:1.6;
+}
+
+.cta{
+text-align:center;
+background:linear-gradient(135deg,#141a3b,#0b1130);
+border-radius:25px;
+padding:70px 20px;
+}
+
+.cta h2{
+font-size:46px;
+margin-bottom:20px;
+}
+
+.discord{
+display:inline-block;
+margin-top:35px;
+padding:20px 45px;
+background:#5865F2;
+color:white;
+text-decoration:none;
+font-weight:700;
+border-radius:14px;
+transition:.3s;
+}
+
+.discord:hover{
+transform:scale(1.05);
+box-shadow:0 15px 35px rgba(88,101,242,.5);
+}
+
+footer{
+text-align:center;
+padding:40px;
+color:#96a0be;
+font-size:14px;
+}
+
+.small{
+margin-top:25px;
+font-size:14px;
+color:#9ea8c6;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+line-height:1.6;
+}
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:none;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Get Rich</div>
+
+<nav>
+<a href="#features">Features</a>
+<a href="#join">Join</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Learn Skills That Could Help You Build Rich <span class="gradient"></span></h1>
+
+<p>
+Join a growing community and learn practical online business strategies,
+step-by-step. Some students aim to build significant side income, but
+results depend on your effort, experience, and market conditions.
+</p>
+
+<div class="buttons">
+<a class="btn primary" href="#join">Get Started</a>
+<a class="btn secondary" href="#features">See What's Inside</a>
+</div>
+
+</div>
+
+</section>
+
+<section id="features" class="reveal">
+
+<h2 class="title">What's Included</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>📚 Full Course</h3>
+<p>Simple lessons designed for beginners and experienced learners alike.</p>
+</div>
+
+<div class="card">
+<h3>💬 Private Discord</h3>
+<p>Network with members, ask questions, and stay updated with new content.</p>
+</div>
+
+<div class="card">
+<h3>🚀 Action Plans</h3>
+<p>Practical strategies you can apply immediately instead of only theory.</p>
+</div>
+
+<div class="card">
+<h3>🔥 Ongoing Updates</h3>
+<p>Receive new lessons and resources as they're released.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="join" class="reveal">
+
+<div class="cta">
+
+<h2>Ready to Join?</h2>
+
+<p>Get access to the course community today.</p>
+
+<a class="discord" href="https://discord.gg/C3NJAyxgd7" target="_blank">
+Join the Discord
+</a>
+
+<p class="small">
+This course is educational. Earnings are 2-3k a week,  results guarantee.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© RblxAccMarket
+
+</footer>
+
+<script>
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("active");
+}
+});
+});
+
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+</script>
+
+</body>
+</html>
